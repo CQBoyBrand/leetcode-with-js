@@ -9,32 +9,32 @@
 
 <body>
     <script>
-        var romanToInt = function (s) {
-            let code = {
-                'I': 1,
-                'V': 5,
-                'X': 10,
-                'L': 50,
-                'C': 100,
-                'D': 500,
-                'M': 1000,
+        var isValid = function (s) {
+            if (!s) return true
+            let sLen = s.length
+            if (sLen % 2 !== 0) return false
+            let obj = {
+                '(': ')',
+                '{': '}',
+                '[': ']',
             }
-            let result = 0
-            for (let i = 0; i < s.length; i++) {
-                const current = code[s[i]];
-                const next = code[s[i + 1]];
-
-                if (next && ((next / current) == 5 || (next / current) == 10) ) {
-                    result += next - current
-                    i++
+            let arr = []
+            for (let i = 0; i < sLen; i++) {
+                if (s[i] in obj) {
+                    arr.push(s[i])
                 } else {
-                    result +=  current
+                    var current = arr.pop()
+                    if (obj[current] !== s[i]) {
+                        return false
+                    }
                 }
-                
             }
-            return result
+
+            return arr.length === 0
         };
-        romanToInt('MCMXCIV')
+        let s = '([{'
+        console.log('aa=', isValid(s))
+        isValid(s)
     </script>
 </body>
 
