@@ -1,5 +1,9 @@
+我用JS刷LeetCode | Day 1 | Two Sum
+
 ### 两数之和：
 > 说明：现阶段的解题暂未考虑复杂度问题
+
+首发地址：[http://www.brandhuang.com/article/1583315258879](http://www.brandhuang.com/article/1583315258879)
 
 ### Question：
 

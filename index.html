@@ -9,32 +9,18 @@
 
 <body>
     <script>
-        var isValid = function (s) {
-            if (!s) return true
-            let sLen = s.length
-            if (sLen % 2 !== 0) return false
-            let obj = {
-                '(': ')',
-                '{': '}',
-                '[': ']',
+        var isPalindrome = function (x) {
+            let s = x;
+            let y = 0;
+            while (s > 0) {
+                y = y * 10 + s % 10;
+                s = Math.floor(s / 10)
             }
-            let arr = []
-            for (let i = 0; i < sLen; i++) {
-                if (s[i] in obj) {
-                    arr.push(s[i])
-                } else {
-                    var current = arr.pop()
-                    if (obj[current] !== s[i]) {
-                        return false
-                    }
-                }
-            }
-
-            return arr.length === 0
+            return y == x;
         };
-        let s = '([{'
-        console.log('aa=', isValid(s))
-        isValid(s)
+        var x = 10
+        isPalindrome(x)
+        console.log(' isPalindrome(x)==', isPalindrome(x))
     </script>
 </body>
 
