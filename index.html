@@ -9,18 +9,15 @@
 
 <body>
     <script>
-        var isPalindrome = function (x) {
-            let s = x;
-            let y = 0;
-            while (s > 0) {
-                y = y * 10 + s % 10;
-                s = Math.floor(s / 10)
-            }
-            return y == x;
+        var removeDuplicates = function (arr) {
+           let newArr =  Array.from(new Set(arr))
+           console.log('newArr==',newArr)
+           console.log('arr==',arr)
+           return newArr
         };
-        var x = 10
-        isPalindrome(x)
-        console.log(' isPalindrome(x)==', isPalindrome(x))
+        let x = [1,1,2]
+        removeDuplicates(x)
+        console.log(' removeDuplicates(x)==', removeDuplicates(x))
     </script>
 </body>
 
