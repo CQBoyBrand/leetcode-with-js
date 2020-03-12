@@ -9,15 +9,20 @@
 
 <body>
     <script>
-        var removeDuplicates = function (arr) {
-           let newArr =  Array.from(new Set(arr))
-           console.log('newArr==',newArr)
-           console.log('arr==',arr)
-           return newArr
+        var removeElement = function (nums, val) {
+            let i = 0;
+            for (let j = 0; j < nums.length; j++) {
+                if (nums[j] !== val) {
+                    nums[i] = nums[j];
+                    i++;
+                }
+            }
+            return i;
         };
-        let x = [1,1,2]
-        removeDuplicates(x)
-        console.log(' removeDuplicates(x)==', removeDuplicates(x))
+        let x = [0, 1, 2, 2, 3, 0, 4, 2]
+        let val = 2
+        removeElement(x, val)
+        console.log(' removeElement(x)==', removeElement(x, val))
     </script>
 </body>
 
