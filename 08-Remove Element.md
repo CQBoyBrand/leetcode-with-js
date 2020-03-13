@@ -1,4 +1,4 @@
-我用JS刷LeetCode | Day 8 |  Remove Duplicates from Sorted Array
+我用JS刷LeetCode | Day 8 |  Remove Element
 ### 删除排序数组中的重复项:
 
 > 说明：现阶段的解题暂未考虑复杂度问题
