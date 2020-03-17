@@ -9,20 +9,22 @@
 
 <body>
     <script>
-        var removeElement = function (nums, val) {
-            let i = 0;
-            for (let j = 0; j < nums.length; j++) {
-                if (nums[j] !== val) {
-                    nums[i] = nums[j];
-                    i++;
+        var plusOne = function (digits) {
+            for(let i = digits.length - 1; i>=0; i--){
+                console.log(digits[i])
+                if(digits[i] === 9){
+                    digits[i] = 0
+                } else{
+                    digits[i]++
+                    return digits
                 }
             }
-            return i;
+            digits.unshift(1)
+            return digits
         };
-        let x = [0, 1, 2, 2, 3, 0, 4, 2]
-        let val = 2
-        removeElement(x, val)
-        console.log(' removeElement(x)==', removeElement(x, val))
+        let x = [9,9]
+        // plusOne(x)
+        console.log('  plusOne(x)==', plusOne(x))
     </script>
 </body>
 
