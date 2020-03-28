@@ -9,22 +9,14 @@
 
 <body>
     <script>
-        var plusOne = function (digits) {
-            for(let i = digits.length - 1; i>=0; i--){
-                console.log(digits[i])
-                if(digits[i] === 9){
-                    digits[i] = 0
-                } else{
-                    digits[i]++
-                    return digits
-                }
-            }
-            digits.unshift(1)
-            return digits
+        var lengthOfLastWord = function (s) {
+            let sArr = s.trim().split(' ')
+            console.log('sArr=', sArr)
+            return sArr[sArr.length - 1].length
         };
-        let x = [9,9]
+        let x = 'a '
         // plusOne(x)
-        console.log('  plusOne(x)==', plusOne(x))
+        console.log('  lengthOfLastWord(x)==', lengthOfLastWord(x))
     </script>
 </body>
 
